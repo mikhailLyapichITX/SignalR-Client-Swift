@@ -973,8 +973,8 @@ private class InnerWebSocket: Hashable {
         rd.remove(from: RunLoop.main, forMode: RunLoop.Mode.default)
         wr.remove(from: RunLoop.main, forMode: RunLoop.Mode.default)
         #else
-        rd.remove(from: RunLoop.main, forMode: RunLoopMode.defaultRunLoopMode)
-        wr.remove(from: RunLoop.main, forMode: RunLoopMode.defaultRunLoopMode)
+        rd.remove(from: RunLoop.main, forMode: RunLoop.Mode.default)
+        wr.remove(from: RunLoop.main, forMode: RunLoop.Mode.default)
         #endif
         rd.delegate = nil
         wr.delegate = nil
@@ -1098,8 +1098,8 @@ private class InnerWebSocket: Hashable {
         rd.schedule(in: RunLoop.main, forMode: RunLoop.Mode.default)
         wr.schedule(in: RunLoop.main, forMode: RunLoop.Mode.default)
         #else
-        rd.schedule(in: RunLoop.main, forMode: RunLoopMode.defaultRunLoopMode)
-        wr.schedule(in: RunLoop.main, forMode: RunLoopMode.defaultRunLoopMode)
+        rd.schedule(in: RunLoop.main, forMode: RunLoop.Mode.default)
+        wr.schedule(in: RunLoop.main, forMode: RunLoop.Mode.default)
         #endif
         rd.open()
         wr.open()
